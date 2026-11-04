@@ -179,6 +179,20 @@ summary::after{content:"+";color:var(--oro);font-family:var(--sans);font-weight:
 details[open] summary::after{transform:rotate(45deg)}
 details p{color:var(--niebla);margin:10px 0 0}
 
+/* descuentos */
+.tiendas{margin:8px 0 18px}
+.tienda{padding:22px 0;border-bottom:1px solid var(--linea)}
+.tienda:first-child{border-top:1px solid var(--linea)}
+.tienda h3{margin-bottom:6px}
+.tienda p{color:var(--niebla);margin:0 0 16px}
+.codigo{display:flex;align-items:stretch;border:1.5px dashed var(--oro-oscuro);border-radius:14px;overflow:hidden;margin:0 0 12px}
+.codigo span{flex:1;display:flex;align-items:center;padding:12px 16px;font-weight:650;font-size:20px;letter-spacing:.12em;color:var(--tiza);-webkit-user-select:all;user-select:all}
+.copiar{flex:none;min-width:108px;border:0;border-left:1.5px dashed var(--oro-oscuro);background:transparent;color:var(--oro-claro);font:inherit;font-size:16px;font-weight:600;padding:0 18px;cursor:pointer}
+.boton-linea{display:flex;align-items:center;justify-content:center;width:100%;padding:15px 20px;border:1px solid var(--oro-oscuro);border-radius:14px;color:var(--oro-claro);font-weight:600;line-height:1.2;text-decoration:none}
+.boton-linea:active,.copiar:active{transform:translateY(1px)}
+.afiliado{font-size:14px}
+.oculto{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
 /* cierre y pie */
 .final{text-align:left}
 .final .boton{margin-top:8px}
@@ -407,7 +421,7 @@ footer details p{font-size:14px}
     <h2>Preguntas</h2>
     <details><summary>¿Necesito experiencia?</summary><p>No. La rutina se adapta a tu nivel y la técnica la corregimos por vídeo desde el primer día.</p></details>
     <details><summary>¿Hay permanencia?</summary><p>No. Pagas mes a mes y lo dejas cuando quieras. El pack solo premia que llegues al cuarto mes.</p></details>
-    <details><summary>¿Incluye dieta?</summary><p>No hago dietas personalizadas: eso le corresponde a un dietista-nutricionista. Para orientarte con tus números tienes la calculadora de esta página.</p></details>
+    <details><summary>¿Me ayudas con la alimentación?</summary><p>Sí: te oriento con lo que comes y con tus números, y para eso tienes también la calculadora de esta página. Lo que no hago son dietas personalizadas, porque eso le corresponde a un dietista-nutricionista.</p></details>
     <details><summary>¿Dónde es el presencial?</summary><p>En el gimnasio donde entreno, en Tenerife. Te paso la ubicación por WhatsApp.</p></details>
     <details><summary>¿Cómo se paga?</summary><p>Mes a mes. Te explico cómo por WhatsApp antes de empezar.</p></details>
     <details><summary>¿La calculadora guarda mis datos?</summary><p>No. Todo se calcula en tu móvil y no se envía a ningún sitio.</p></details>
@@ -419,6 +433,34 @@ footer details p{font-size:14px}
     <h2>El primer paso es escribirme</h2>
     <p class="intro">Cuéntame tu objetivo y te digo si puedo ayudarte. Te contesto yo.</p>
     <a class="boton" href="https://wa.me/34697348122?text=Hola%20Borja%2C%20vengo%20de%20tu%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20el%20entrenamiento." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H11l-4.4 3.5c-.5.4-1.1 0-1.1-.6V17A2.5 2.5 0 0 1 4 14.5z"/></svg>Escríbeme por WhatsApp</a>
+  </div>
+</section>
+
+<section class="seccion" id="descuentos">
+  <div class="contenedor">
+    <h2>Descuentos</h2>
+    <p class="intro">No necesitas suplementos ni productos especiales para avanzar: primero van el entreno, la comida y el descanso. Si ya los compras, que sea con descuento.</p>
+    <div class="tiendas">
+      <div class="tienda">
+        <h3>Zumub</h3>
+        <p>Suplementos y alimentación. Pon mi código al pagar.</p>
+        <div class="codigo"><span>BMDFIT</span><button type="button" class="copiar" data-codigo="BMDFIT">Copiar</button></div>
+        <a class="boton-linea" href="https://zumu.be/bmdfit" target="_blank" rel="sponsored noopener">Ir a Zumub</a>
+      </div>
+      <div class="tienda">
+        <h3>Dietbox</h3>
+        <p>La caja saludable: cada mes, una caja sorpresa con snacks, barritas y otros productos saludables. Pon mi código al pagar.</p>
+        <div class="codigo"><span>cuerpoymente</span><button type="button" class="copiar" data-codigo="cuerpoymente">Copiar</button></div>
+        <a class="boton-linea" href="https://dietbox.es/ref/cuerpoymenteapp/" target="_blank" rel="sponsored noopener">Ir a Dietbox</a>
+      </div>
+      <div class="tienda">
+        <h3>Prozis</h3>
+        <p>Suplementos, comida y ropa de deporte. Prozis cambia de código en cada campaña: entra desde aquí y, si hay uno activo, úsalo al pagar.</p>
+        <a class="boton-linea" href="https://prozis.com/Npbh" target="_blank" rel="sponsored noopener">Ir a Prozis</a>
+      </div>
+    </div>
+    <p class="letra afiliado">Son enlaces de afiliado: si compras desde aquí, la tienda me paga una comisión y a ti no te cuesta más.</p>
+    <p class="oculto" id="copiado" aria-live="polite"></p>
   </div>
 </section>
 </main>
@@ -441,6 +483,7 @@ footer details p{font-size:14px}
       <summary>Privacidad</summary>
       <p>Responsable: Borja Marrero Darias (cuerpoymenteapp@gmail.com). Esta web no usa cookies ni herramientas de analítica, y la calculadora no guarda ni envía tus datos.</p>
       <p>Si me escribes por WhatsApp o por correo, uso tus datos solo para responderte y, si contratas, para prestarte el servicio. La base legal es tu consentimiento y, en su caso, el contrato. No los cedo a nadie salvo obligación legal. WhatsApp es un servicio de Meta con su propia política de privacidad.</p>
+      <p>Los enlaces a Zumub, Dietbox y Prozis son de afiliado. Si entras en esas tiendas, ellas pueden usar sus propias cookies para saber que llegas desde aquí, según sus políticas de privacidad.</p>
       <p>Puedes pedir el acceso, la rectificación o la supresión de tus datos escribiendo al correo de arriba, y reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
     </details>
     <p>© 2026 Borja Marrero Darias</p>
@@ -592,6 +635,33 @@ footer details p{font-size:14px}
   }
   document.querySelectorAll('input[name="modalidad"]').forEach(function(e){ e.addEventListener("change", pack); });
   pack();
+
+  /* ---------- descuentos: copiar código ---------- */
+  var copiado = document.getElementById("copiado");
+  document.querySelectorAll(".copiar").forEach(function(b){
+    b.addEventListener("click", function(){
+      var codigo = b.getAttribute("data-codigo");
+      function hecho(){
+        b.textContent = "Copiado";
+        copiado.textContent = "Código " + codigo + " copiado";
+        setTimeout(function(){ b.textContent = "Copiar"; copiado.textContent = ""; }, 2500);
+      }
+      function aMano(){
+        var t = document.createElement("textarea");
+        t.value = codigo; t.setAttribute("readonly", "");
+        t.style.position = "fixed"; t.style.top = "0"; t.style.opacity = "0";
+        document.body.appendChild(t); t.select(); t.setSelectionRange(0, codigo.length);
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(t);
+        if (ok) { hecho(); return; }
+        var r = document.createRange(); r.selectNodeContents(b.previousElementSibling);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(codigo).then(hecho, aMano);
+      else aMano();
+    });
+  });
 
   /* ---------- barra fija ---------- */
   var barra = document.getElementById("barra-wa");
